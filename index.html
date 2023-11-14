@@ -3,12 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Password Genrator</title>
+    <title>Password Generator</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-    <div id="wrapper">
-        
+    <div id="wrapper" class="m-0 p-0 w-screen h-screen relative">
+        <div id="container" class="w-[900px] flex flex-col justify-center items-center mx-auto gap-[10px]">
+            <!--main heading-->
+            <div><h1>Password Generator</h1></div>
+
+            <!--genrated password area-->
+            <div class="flex justify-between px-2">
+                <div><textarea name="" class="w-[80%]"></textarea></div>
+                <div><i></i></div>
+            </div>
+
+            <!--main area-->
+            <div>
+                    <div>
+                        <div>Password length</div>
+                        <div>8</div>
+                    </div>
+                    <div></div>
+                    <div>
+                        <div>
+                            <input type="checkbox">
+                            <label for="checkbox">Include Uppercase Letters</label>
+                        </div>
+                        <div>
+                            <input type="checkbox">
+                            <label for="checkbox">Include Lowercase Letters</label>
+                        </div>
+                        <div>
+                            <input type="checkbox">
+                            <label for="checkbox">Include Numbers</label>
+                        </div>
+                        <div>
+                            <input type="checkbox">
+                            <label for="checkbox">Include Symbols</label>
+                        </div>
+                    </div>
+                    <div>
+                        <div>Strengh</div>
+                        <div></div>
+                    </div>
+                    <div>
+                        <button>Generate Password</button>
+                    </div>
+            </div>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
