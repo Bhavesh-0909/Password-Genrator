@@ -5,54 +5,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Password Generator</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        #wrapper{
+            background: #053B50;
+        }
+        .shadow1{
+            box-shadow: 0 7px 0px 0px #64CCC5;
+        }
+    </style>
 </head>
 <body>
-    <div id="wrapper" class="m-0 p-0 w-screen h-screen relative">
-        <div id="container" class="w-[900px] flex flex-col justify-center items-center mx-auto gap-[10px]">
+    <div id="wrapper" class="m-0 p-0 w-screen h-screen relative flex flex-col justify-center items-center">
+        <div id="container" class="w-[300px] flex flex-col justify-center items-center mx-auto gap-[20px]">
             <!--main heading-->
-            <div><h1>Password Generator</h1></div>
+            <div class="w-[100%]">
+                <h1 class="text-[30px] font-bold text-center text-white">Password Generator</h1>
+            </div>
 
             <!--genrated password area-->
-            <div class="flex justify-between px-2">
-                <div><textarea name="" class="w-[80%]"></textarea></div>
-                <div><i></i></div>
+            <div class="flex justify-between items-center w-[100%] h-[50px] bg-[#176B87] px-5 rounded-xl shadow1">
+                <div><input readonly placeholder="Password" class="h-[100%] bg-inherit text-black"></div>
+                <button class="relative">
+                    <span class="hidden absolute bottom-[130%] right-[-120%] z-[100] bg-[#64CCC5] rounded-xl text-center px-3 p-1">Copied</span>
+                    <img src="./copy.svg" alt="copy" class="w-[20px] relative">
+                </button>
             </div>
 
             <!--main area-->
-            <div>
-                    <div>
-                        <div>Password length</div>
-                        <div>8</div>
+            <div class="w-[100%] bg-[#176B87] shadow1 flex flex-col gap-[15px] p-5 rounded-xl text-[#EEEEEE]">
+                    <div class="flex flex-col gap-5">
+                        <div class="flex justify-between">
+                            <div class="text-[#272829] font-bold">Password length</div>
+                            <div class="text-white">0</div>
+                        </div>
+                        <input type="range" min="1" max="20" step="1">
                     </div>
-                    <div></div>
-                    <div>
+                    
+                    <div class="flex flex-col gap-1 text-sm">
                         <div>
-                            <input type="checkbox">
-                            <label for="checkbox">Include Uppercase Letters</label>
+                            <input type="checkbox" id="uppercse" class="mr-2">
+                            <label for="uppercse">Include Uppercase Letters</label>
                         </div>
                         <div>
-                            <input type="checkbox">
-                            <label for="checkbox">Include Lowercase Letters</label>
+                            <input type="checkbox" id="lowercase" class="mr-2">
+                            <label for="lowercase">Include Lowercase Letters</label>
                         </div>
                         <div>
-                            <input type="checkbox">
-                            <label for="checkbox">Include Numbers</label>
+                            <input type="checkbox" id="numbers" class="mr-2">
+                            <label for="numbers">Include Numbers</label>
                         </div>
                         <div>
-                            <input type="checkbox">
-                            <label for="checkbox">Include Symbols</label>
+                            <input type="checkbox" id="symbols" class="mr-2">
+                            <label for="symbols">Include Symbols</label>
                         </div>
                     </div>
-                    <div>
-                        <div>Strengh</div>
-                        <div></div>
+
+                    <div class="flex justify-between items-center mb-2">
+                        <div class="text-[#272829] font-bold">Strengh</div>
+                        <div class="w-[15px] h-[15px] rounded-full bg-red-500"></div>
                     </div>
-                    <div>
-                        <button>Generate Password</button>
+
+                    <div class="mx-auto">
+                        <button class="w-fit border shadow1 rounded-xl px-14 py-1 text-center text-[#64CCC5]">Generate Password</button>
                     </div>
             </div>
         </div>
     </div>
+    <script src="https://kit.fontawesome.com/dedcff7b73.js" crossorigin="anonymous"></script>
     <script src="script.js"></script>
 </body>
 </html>
