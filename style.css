@@ -1,0 +1,20 @@
+#wrapper{
+    background: #053B50;
+}
+.shadow1{
+    box-shadow: 0 7px 0px 0px #64CCC5;
+}
+.copiedmsg{
+    padding: 5px;
+    position: absolute;
+    bottom: 130%;
+    right: -120%;
+    background-color: #64CCC5;
+    border-radius: 15%;
+    text-align: center;
+    font-size:small;
+    
+}
+.colorbg{
+    color: yellow;
+}

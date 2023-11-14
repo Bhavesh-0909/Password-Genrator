@@ -5,14 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Password Generator</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        #wrapper{
-            background: #053B50;
-        }
-        .shadow1{
-            box-shadow: 0 7px 0px 0px #64CCC5;
-        }
-    </style>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <div id="wrapper" class="m-0 p-0 w-screen h-screen relative flex flex-col justify-center items-center">
@@ -24,27 +17,27 @@
 
             <!--genrated password area-->
             <div class="flex justify-between items-center w-[100%] h-[50px] bg-[#176B87] px-5 rounded-xl shadow1">
-                <div><input readonly placeholder="Password" class="h-[100%] bg-inherit text-black"></div>
-                <button class="relative">
-                    <span class="hidden absolute bottom-[130%] right-[-120%] z-[100] bg-[#64CCC5] rounded-xl text-center px-3 p-1">Copied</span>
-                    <img src="./copy.svg" alt="copy" class="w-[20px] relative">
+                <div><input readonly placeholder="Password" id="password-display" class="h-[100%] bg-inherit font-bold colorbg"></div>
+                <button class="relative copyButton" >
+                    <span class="copymsg"></span>
+                    <img src="./copy.svg" alt="copy" class="w-[20px] relative ">
                 </button>
             </div>
 
             <!--main area-->
             <div class="w-[100%] bg-[#176B87] shadow1 flex flex-col gap-[15px] p-5 rounded-xl text-[#EEEEEE]">
-                    <div class="flex flex-col gap-5">
+                    <div class="flex flex-col gap-3 pb-1">
                         <div class="flex justify-between">
                             <div class="text-[#272829] font-bold">Password length</div>
-                            <div class="text-white">0</div>
+                            <div class="font-bold passLength colorbg"></div>
                         </div>
-                        <input type="range" min="1" max="20" step="1">
+                        <input type="range" min="1" max="20" step="1" class="passLengthSlider">
                     </div>
                     
                     <div class="flex flex-col gap-1 text-sm">
                         <div>
-                            <input type="checkbox" id="uppercse" class="mr-2">
-                            <label for="uppercse">Include Uppercase Letters</label>
+                            <input type="checkbox" id="uppercase" class="mr-2">
+                            <label for="uppercase">Include Uppercase Letters</label>
                         </div>
                         <div>
                             <input type="checkbox" id="lowercase" class="mr-2">
@@ -61,12 +54,12 @@
                     </div>
 
                     <div class="flex justify-between items-center mb-2">
-                        <div class="text-[#272829] font-bold">Strengh</div>
-                        <div class="w-[15px] h-[15px] rounded-full bg-red-500"></div>
+                        <div class="text-[#272829] font-bold">Strength</div>
+                        <div class="w-[15px] h-[15px] rounded-full strengthGlow"></div>
                     </div>
 
                     <div class="mx-auto">
-                        <button class="w-fit border shadow1 rounded-xl px-14 py-1 text-center text-[#64CCC5]">Generate Password</button>
+                        <button class="generatButton w-fit border border-[#64CCC5] shadow1 rounded-xl px-14 py-1 text-center text-[#64CCC5]">Generate Password</button>
                     </div>
             </div>
         </div>
