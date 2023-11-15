@@ -19,3 +19,7 @@
 .colorbg{
     color: yellow;
 }
+#password-display::placeholder{
+    color: yellow;
+    font-size: large;
+}
