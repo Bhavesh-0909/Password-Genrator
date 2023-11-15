@@ -84,7 +84,7 @@ async function copiedfun(){
         copymsg.innerText = "Copied";
     }
     catch(e){
-        copymsg.innerText = "Copied";
+        copymsg.innerText = "failed";
     }
     copymsg.classList.add("copiedmsg");
 
@@ -105,7 +105,7 @@ copyButton.addEventListener('click', ()=>{
 });
 
 function checkboxcount() {
-    checkcount = 0; // Initialize checkcount to 0 before counting
+    checkcount = 0; 
     allcheckbox.forEach((checkbox) => {
         if (checkbox.checked) {
             checkcount++;
@@ -119,7 +119,7 @@ allcheckbox.forEach( (checkbox) => {
 
 
 generatButton.addEventListener('click',()=>{
-    console.log("starting");
+    
     if(checkcount == 0) 
         return;
 
@@ -129,7 +129,6 @@ generatButton.addEventListener('click',()=>{
         handlesilder();
     }
     password = "";
-    console.log("starting");
 
     let arrayOfFunction = [];
     if(uppercase.checked) arrayOfFunction.push(getUppercase);
@@ -140,21 +139,15 @@ generatButton.addEventListener('click',()=>{
     for(let i = 0; i<checkcount; i++){
         password += arrayOfFunction[i]();
     }
-    console.log("comp");
 
     for(let i = 0; i<passwordLength-arrayOfFunction.length;i++){
         let randIndex = getRndNo(0 , arrayOfFunction.length);
         password += arrayOfFunction[randIndex]();
     }
-    console.log("password");
 
     password = shufflePassword(Array.from(password));
-    console.log("suff");
-    
 
     passwordDisplay.value = password;
-    console.log("addesd");
-
 
     calcStrength();
 })
