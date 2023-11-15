@@ -1,3 +1,4 @@
+const strengthText = document.querySelector('.strengthText');
 const copyButton = document.querySelector('.copyButton');
 const passwordDisplay = document.querySelector('#password-display');
 const passLength = document.querySelector(".passLength");
@@ -23,7 +24,10 @@ function handlesilder(){
 }
 
 function indicator(color){
+    strengthText.innerText = "Strength";
     strengthGlow.style.backgroundColor = color;
+    strengthGlow.style.boxShadow = color;
+    
 }
 function getRndNo(max, min){
     return Math.floor(Math.random()*(max-min)+min);
