@@ -21,5 +21,14 @@
 }
 #password-display::placeholder{
     color: yellow;
-    font-size: large;
+    font-size:medium;
+    text-transform: uppercase;
+}
+.check div input{
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border: 1px solid aqua;
+    border-radius: 5px;
+
 }
