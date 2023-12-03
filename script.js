@@ -19,14 +19,17 @@ let symbolsChar = '~!@#$%^&*()-_=+;[],./<>?:"{}\|"';
 handlesilder();
 
 function handlesilder(){
-    
-    passLength.innerText = passwordLength ;
+    passLengthSlider.value = passwordLength;
+    passLength.innerText = passwordLength;
+    const min = passLengthSlider.min;
+    const max = passLengthSlider.max;
+    passLengthSlider.style.backgroundSize =( (passwordLength - min)*100/(max - min)) + "% 100%";
 }
 
 function indicator(color){
     strengthText.innerText = "Strength";
     strengthGlow.style.backgroundColor = color;
-    strengthGlow.style.boxShadow = color;
+    strengthGlow.style.boxShadow = `0px 0px 12px 1px ${color}`;
     
 }
 function getRndNo(max, min){

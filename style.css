@@ -39,3 +39,28 @@
     background-repeat: no-repeat;
     object-fit:cover;
 }
+.passLengthSlider{
+    appearance: none;
+    background: #053B50;
+    border-radius: 1rem;
+    background-image: linear-gradient(#64CCC5,#64CCC5);
+    background-repeat: no-repeat;
+    height: 0.60rem;
+}
+input[type="range"]::-webkit-slider-thumb{
+    appearance: none;
+    position: relative;
+    height: 1.2rem;
+    width: 1.2rem;
+    border-radius: 50%;
+    background-color: yellow;
+
+}
+input[type="range"]:focus{
+    outline: 1px solid yellow;
+}
+input[type="range"]::-webkit-slider-thumb:hover{
+    outline: 1px solid yellow;
+    background-color: black;
+    box-shadow: 0px 0px 12px 1px yellow;
+}
