@@ -58,6 +58,9 @@ input[type="range"]::-webkit-slider-thumb{
 }
 input[type="range"]:focus{
     outline: 1px solid yellow;
+
+
+    
 }
 input[type="range"]::-webkit-slider-thumb:hover{
     outline: 1px solid yellow;

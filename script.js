@@ -126,7 +126,6 @@ generatButton.addEventListener('click',()=>{
     if(checkcount == 0) 
         return;
 
-    
     if(passwordLength<checkcount){
         passwordLength = checkcount;
         handlesilder();
