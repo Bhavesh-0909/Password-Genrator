@@ -30,5 +30,12 @@
     height: 15px;
     border: 1px solid aqua;
     border-radius: 5px;
-
+    
+    
+}
+.check div input:checked{
+    background-color: #64CCC5;
+    background-image: url(./check-solid.svg);
+    background-repeat: no-repeat;
+    object-fit:cover;
 }
