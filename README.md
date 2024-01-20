@@ -32,7 +32,7 @@ A live demo of the password generator app can be found [here](https://bhavesh-09
 
 To run this application locally, follow these steps:
 
-1. Clone this repository to your local machine using `git clone https://github.com/your-username/password-generator.git`
+1. Clone this repository to your local machine using `git clone https://github.com/Bhavesh-0909/Password-Genrator.git`
 2. Navigate to the project directory.
 3. Open `index.html` in your preferred web browser.
 
